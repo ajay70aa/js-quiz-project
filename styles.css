@@ -152,7 +152,9 @@ button.submit-answer:hover {
     width: 90%;
     height: auto;
   }
-
+  #question-container {
+    padding: 20px;
+  }
   .section {
     font-size: 18px;
     padding: 25px;
@@ -174,7 +176,9 @@ button.submit-answer:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-
+  #question-container {
+    padding: 10px;
+  }
   .section {
     font-size: 14px;
     padding: 20px;
