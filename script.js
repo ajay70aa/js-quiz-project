@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("home-container").style.display = "none";
         document.getElementById("question-container").style.display = "block";
         document.getElementById("question-container").innerHTML = `
+        <div id="quit-button">
+          <i class="fa-solid fa-arrow-left-long"></i>
+        </div>
         <p id="score">score: 0 | High Score: ${highScore}</p>
         <div id="question"></div>
         <div id="options"></div>
@@ -103,6 +106,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("next-button").addEventListener("click", function () {
           answerSelected = false;
           showQuestions();
+        });
+        document.getElementById("quit-button").addEventListener("click", function () {
+          const popupContainer = document.getElementById("popup-container");
+          popupContainer.style.display = "block";
+          document.getElementById("yes").addEventListener("click", function () {
+            quizOver();
+            popupContainer.style.display = "none";
+          })
+          document.getElementById("no").addEventListener("click", function () {
+            popupContainer.style.display = "none";
+          });
         });
 
         function checkAnswer(userAnswer, correctAnswer) {

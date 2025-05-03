@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
 </head>
 <body>
   <div id="home-container">
@@ -19,7 +20,19 @@
       <div class="section" data-section="3">Indian History</div>
     </div>
   </div>
+  <div class="popup-container" id="popup-container" style="display: none;">
+    <div class="popup" id="popup">
+      <p>Are you sure to exit the quiz?</p>
+      <div class="popup-buttons">
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+      </div>
+    </div>
+  </div>
   <div id="question-container" style="display: none">
+    <div id="quit-button">
+      <i class="fa-solid fa-arrow-left-long"></i>
+    </div>
     <p id="score">score</p>
     <div id="question"></div>
     <div id="options"></div>
